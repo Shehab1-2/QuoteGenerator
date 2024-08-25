@@ -31,4 +31,17 @@ For deploying this app on AWS:
 - Use **RDS** (Relational Database Service) for database management.
 - Use **S3** (Simple Storage Service) to store the front-end components.
 
+## Testing Overview
+
+This project includes both unit and integration tests to ensure the reliability and correctness of the application.
+
+- **Unit Testing**: The `test_save_quote` method is a unit test that verifies the correct functionality of saving a quote to the database. It ensures that when a quote is submitted through the API, it is properly stored in the database.
+
+- **Integration Testing**: The `test_get_random_quote` and `test_get_saved_quotes` methods are integration tests. These tests validate the interaction between various components of the application, including views, URL routing, and database models. Specifically, they ensure that:
+  - The `get_random_quote` API endpoint correctly retrieves a random quote.
+  - The `get_saved_quotes` API endpoint accurately returns all saved quotes from the database.
+
+These tests are implemented using Django's testing framework, providing confidence in both individual components and their integration within the overall application.
+
+
 ---
